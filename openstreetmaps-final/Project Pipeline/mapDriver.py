@@ -8,7 +8,7 @@ import webbrowser
 
 from utilHyp import haversineFunction, _convert_to_degress, getGPS
 
-
+# MAP DRIVER AS FOUND IN A RECOMMENDATION NOTEBOOK
 
 def plotmap(data, hints, move_mode, user_feed):
 

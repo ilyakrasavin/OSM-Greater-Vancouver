@@ -11,13 +11,12 @@ from pathlib import Path
 # Image Exif data extraction and Utilities.
 from utilHyp import haversineFunction, _convert_to_degress, getGPS
 
-# Map Driver
+# Map Driver Program
 from mapDriver import plotmap
 
 
 # Launches the map on specified arguments.
 def setup(tour_mode, hints, move_mode, imageWalk):
-
 
     if tour_mode.lower() == 'tourism':
         plotmap('tourism', hints, move_mode, imageWalk)
@@ -32,7 +31,6 @@ def setup(tour_mode, hints, move_mode, imageWalk):
 
 
 
-
 def main(tour_mode, move_mode, hints):
 
     user_locations = []
@@ -40,21 +38,22 @@ def main(tour_mode, move_mode, hints):
     # Open a directory
     ImagePath = Path('./UserWalk/').glob('*')
 
+    # Search for Geoposition Data (EXif)
     for each in ImagePath:
         print(each)
-        kek = getGPS(each)
-        if kek == {}:
+        data = getGPS(each)
+        if data == {}:
             print("\nNO GEODATA AVAILABLE FOR: " + str(each))
             continue
 
-        kek = (kek.get('latitude'), kek.get('longitude'))
-        print(kek)
-        user_locations.append(kek)
+        data = (data.get('latitude'), data.get('longitude'))
+        print(data)
+        user_locations.append(data)
 
     if(len(user_locations) == 0):
         print("No data retreived from a path")
 
-
+    # Launch
     setup(tour_mode, hints, move_mode, user_locations)
 
     return

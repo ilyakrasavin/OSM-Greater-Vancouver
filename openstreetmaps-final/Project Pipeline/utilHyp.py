@@ -1,10 +1,11 @@
-#Distance function and any toher util funcitons I might need:
+# Supporting Functions
+
 import numpy as np
 import pandas as pd
 import exifread as ef
 
 
-#Distance function I used from ex3
+# Distance function
 def haversineFunction(cord1, cord2):
     #cord1[0] = lon1 cord1[1] = lat1
     #cord2[0] = lon2 cord2[1] = lat2
@@ -24,10 +25,9 @@ def haversineFunction(cord1, cord2):
 
     
 
-
-#Get list of N closest points to cord1
-#Input: cord1 [lon, lat](in radians), inputframe = dataframe with lon, lat, combineof the two
-#Output: list of n elements of distance of n
+# Get list of N closest points to cord1
+# Input: cord1 [lon, lat](in radians), inputframe = dataframe with lon, lat, combineof the two
+# Output: list of n elements of distance of n
 def getDistanceListN(cord1, inputFrame, n):
     #Get distance with atleast one element in it
     distRange = 0.1
@@ -67,10 +67,10 @@ def getDistanceListN(cord1, inputFrame, n):
         return( distFrame["distance"].tolist()[:n])
 
     
-#Exif Gps extract code taken from:
-#https://stackoverflow.com/a/45857824
-#convert_to_degress function was borrowed from
-#https://gist.github.com/snakeye/fdc372dbf11370fe29eb
+# Exif Gps extract code taken from:
+# https://stackoverflow.com/a/45857824
+# convert_to_degress function was borrowed from
+# https://gist.github.com/snakeye/fdc372dbf11370fe29eb
 def _convert_to_degress(value):
     """
     Helper function to conver the GPS coordinates stored in the EXIF to degress in float format
@@ -83,6 +83,7 @@ def _convert_to_degress(value):
     s = float(value.values[2].num) / float(value.values[2].den)
 
     return d + (m / 60.0) + (s / 3600.0)
+
 
 def getGPS(filepath):
     '''
