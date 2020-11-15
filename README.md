@@ -42,4 +42,5 @@ To test the program, you will need to:
     
         python3 main.py night walk pub bar
         
-![alt text](Screenshot from 2020-08-13 20-58-25.png)
+
+<img src="https://raw.githubusercontent.com/ilyakrasavin/OSM-Greater-Vancouver/master/sample_screen.png?token=AKGN4GQ2ZGKD6ZQDBEJHN227WEY3K" width=50% height=50%>
