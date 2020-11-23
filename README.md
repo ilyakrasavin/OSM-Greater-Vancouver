@@ -1,11 +1,11 @@
-# OpenStreetMaps Recommendation System
+# Recommendation System: OpenStreetMaps - Greater Vancouver
 
 ## About
 
-This term project was carried out in the scope of Computational Data Science Class @ Simon Fraser University.<br>
-The goal was to familiarize ourselves with important procedures such as Data Retrieval, Transformation & Cleaning and Visualization.<br>
-Geospatial Data from OpenStreetMaps for the area of Greater Vancouver is considered. Additional SQL requests were made to WikiMedia database in attempts to augment the dataset with images. While Augmentation failed due to lack of images for desired entries, the team has gained important experience transforming and cleaning existing data.<br>
-As a result, we have designed a simple recommendation system using Folium in Python. It takes geotagged images and suggests spots of interest to a user on a Map.
+This term project was carried out within scope of Computational Data Science (CMPT353) @ Simon Fraser University.<br>
+The goal was to familiarize ourselves with important procedures such as ETL, Descriptive Analysis and Visualization.<br>
+Geospatial Data from OpenStreetMaps for the area of Greater Vancouver is considered (provided by instuctor). Additional SQL requests were made to WikiMedia database in attempts to augment the dataset with images for visualization purposes. While Augmentation failed due to lack of images for desired entries, the team has gained important experience cleaning, transforming and working with existing data.<br>
+As a result, we designed a simple recommendation system using Folium in Python. The program takes geotagged images of User's path and shows spots of interest located closely on a map.
 
 ## Contents
 
@@ -22,7 +22,7 @@ As a result, we have designed a simple recommendation system using Folium in Pyt
 
 ## Requirements
 
-The runnnable program relies on the following packages:
+The runnnable Python program relies on the following packages:
 
     pandas, numpy, PIL, folium, pathlib, exifread, webbrowser
 
@@ -37,7 +37,7 @@ To Run the program, you will need to:
     To get recommendations based on your interests and travel mode [ walk | driving | transit ]. 
     
         python3 main.py [TourMode] [MoveMode] [Hints]
-    The 'Hints' argument is optional. There is no limit on the number of hints you can pass it.<br> Omitting it will result in a general suggestion based on the broad interest defined by user:
+    The 'Hints' argument is optional. There is no limit on the number of hints you can pass it.<br> Omitting it will result in a general suggestion based on the broad interest (TourMode) defined by user:
 
     
     | TourMоde | Hints |
@@ -60,3 +60,7 @@ To Run the program, you will need to:
   <img width="50%" height="50%" src="https://raw.githubusercontent.com/ilyakrasavin/OSM-Greater-Vancouver/master/sample_screen.png?token=AKGN4GQ2ZGKD6ZQDBEJHN227WEY3K">
 </p>
 
+## Credits
+Ilia Krasavin (Data Transformation & Retrieval, Visualization Module)<br>
+Stas Kalinowskii (Data Cleaning, Descriptive Analysis)
+Greg Baker (Course Instructor)
