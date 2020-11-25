@@ -1,24 +1,26 @@
-# Recommendation System: OpenStreetMaps - Greater Vancouver
+# Recommendation System: OpenStreetMaps
+Computational Data Science (CMPT 353) @ Simon Fraser University<br>
 
 ## About
 
-This term project was carried out within scope of Computational Data Science (CMPT353) @ Simon Fraser University.<br>
-The goal was to familiarize ourselves with important procedures such as ETL, Descriptive Analysis and Visualization.<br>
-Geospatial Data from OpenStreetMaps for the area of Greater Vancouver is considered (provided by instuctor). Additional SQL requests were made to WikiMedia database in attempts to augment the dataset with images for visualization purposes. While Augmentation failed due to lack of images for desired entries, the team has gained important experience cleaning, transforming and working with existing data.<br>
-As a result, we designed a simple recommendation system using Folium in Python. The program takes geotagged images of User's path and shows spots of interest located closely on a map.
+The goal of this project was to become familiar with:<br>
+1) Geospatial Data (OpenStreetMaps - Greater Vancouver Area)
+2) Important Data Science procedures such as ETL, Descriptive Analysis and Visualization.<br>
+
+Simple recommendation module developed in Python displays spots of interest based on geotagged pictures of a User's path.
 
 ## Contents
 
 ### /Datasets<br>
 - Contains Datasets as Provided for the course in JSON format<br>
-- WikiData Folder Contains additional data queried from Wikimedia Database
+- WikiData Folder Contains additional data queried from Wikimedia Database<br>
 
 ### /Data Extraction<br>
-- Scripts used to retrieve initial OpenStreetMaps Data for Vancouver Area
+- Scripts used to retrieve initial OpenStreetMaps Data for Greater Vancouver Area<br>
 
 ### /Project Pipeline<br>
-- Jupyter Notebooks Describing the Progress
-- Driver Python Program and Support Scripts
+- Jupyter Notebooks outlining the Progress
+- Driver Program (main.py) and Supporting Python Scripts
 
 ## Requirements
 
@@ -51,8 +53,8 @@ To Run the program, you will need to:
 
     
     ### Example:
-    This code will make 'Nightlife' suggestions related to path (images) stored in ./UserWalk directory.<br>
-    User prefers to see pubs and bars, thus passes them as hints.
+    This code will provide 'Nightlife' suggestions related to a path (images) stored in ./UserWalk directory.<br>
+    User prefers to see _pubs_ and _bars_ in a _walking_ distance, thus passes it as hints.
     
         python3 main.py night walk pub bar
         
@@ -62,5 +64,5 @@ To Run the program, you will need to:
 
 ## Credits
 Ilia Krasavin (Data Transformation & Retrieval, Visualization Module)<br>
-Stas Kalinowskii (Data Cleaning, Descriptive Analysis)
+Stas Kalinowskii (Data Cleaning, Descriptive Analysis)<br>
 Greg Baker (Course Instructor)
