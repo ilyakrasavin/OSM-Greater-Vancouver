@@ -59,7 +59,7 @@ To Run the program, you will need to:
         python3 main.py night walk pub bar
         
 <p align="center">
-  <img width="50%" height="50%" src="https://raw.githubusercontent.com/ilyakrasavin/OSM-Greater-Vancouver/master/sample_screen.png?token=AKGN4GQ2ZGKD6ZQDBEJHN227WEY3K">
+  <img width="50%" height="50%" src="https://raw.githubusercontent.com/ilyakrasavin/OSM-Greater-Vancouver/master/sample_screen.png">
 </p>
 
 ## Credits
